@@ -100,7 +100,7 @@ class EduPotpie{
       $action = str_replace("/" , "" , $args[0]);
       
       switch($this->Object_name){
-        case "assignment" :
+        case "assignment" : // assignment Object Begins
           //switch for the action 
           switch($action){
             case "getList" : // getList action begins
@@ -166,12 +166,88 @@ class EduPotpie{
             
             break;  //restore action done
             case "update" : // update action begins
-            
+             
+             //here we have to update assignment 
+              if (is_array($args[1])){
+                //set the URL
+                $url = "http://www.edu.potpie.in/api/assignment.php?token=sndfkksjdkf&key=update";
+                
+                //output
+                return $this->Post($url , $args[1]);
+                
+              }else{
+              
+                //no Post Data found !
+                return false;
+              
+              }
                 
             
             break; // update action done
-          }
-        break;
+          
+          } //action switch case Ends
+          
+        break; // assignment object Ends
+        case "notes" : //notes Object Begins
+          
+          switch ($action){ // action Switch begins
+            
+            case "create" : // create action begins
+            
+             //here we have to create notes 
+              if (is_array($args[1])){
+                //set the URL
+                $url = "http://www.edu.potpie.in/api/notes.php?token=sndfkksjdkf&key=create";
+                
+                //output
+                return $this->Post($url , $args[1]);
+                
+              }else{
+              
+                //no Post Data found !
+                return false;
+              
+              }  
+              
+              
+            break; // create action ends
+            case "update" : // update action begins
+            
+             //here we have to update notes 
+              if (is_array($args[1])){
+                //set the URL
+                $url = "http://www.edu.potpie.in/api/notes.php?token=sndfkksjdkf&key=update";
+                
+                //output
+                return $this->Post($url , $args[1]);
+                
+              }else{
+              
+                //no Post Data found !
+                return false;
+              
+              }  
+              
+              
+            break; // update action ends
+            case "getAll" : // getAll action begins
+              
+              
+              
+            break; // getAll action ends
+          } // action switch ends 
+          
+          
+        break; // notes Object Ends
+        case "question_paper" : // question paper object begins
+          
+          switch ($action){ // action switch begins
+            
+            
+            
+          }//action switch ends
+          
+        break; // question paper Object Ends
       }
       
     }
