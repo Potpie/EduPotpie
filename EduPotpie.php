@@ -59,7 +59,9 @@ class EduPotpie{
     "class" , 
     "college" 
   );
-  
+  /*
+ Constructor EduPotpie being
+*/
   public function EduPotpie($access){
     if (is_array($access) == true){
       //valid the token 
