@@ -108,7 +108,7 @@ class EduPotpie{
             case "getList" : // getList action begins
             
               //this should return list of data 
-              $f = file_get_contents("http://www.edu.potpie.in/api/assignment.php?token=sdsddkjjkjjks&key=getAll");
+              $f = file_get_contents("http://www.edupotpie.com/api/assignment.php?token=sdsddkjjkjjks&key=getAll");
               
               //output
               return json_decode($f,true);
@@ -119,7 +119,7 @@ class EduPotpie{
               //here we have to create new assignment 
               if (is_array($args[1])){
                 //set the URL
-                $url = "http://www.edu.potpie.in/api/assignment.php?token=sndfkksjdkf&key=create";
+                $url = "http://www.edupotpie.com/api/assignment.php?token=sndfkksjdkf&key=create";
                 
                 //output
                 return $this->Post($url , $args[1]);
@@ -135,7 +135,7 @@ class EduPotpie{
             case  "trash" : //trash action begins
                 
                 //set the url
-                $url = "http://www.edu.potpie.in/api/assignment.php?token=sndfkksjdkf&key=removeAssignment&ass_id=".$args[1]['ass_id']."&uid=".$args[1]['uid'];
+                $url = "http://www.edupotpie.com/api/assignment.php?token=sndfkksjdkf&key=removeAssignment&ass_id=".$args[1]['ass_id']."&uid=".$args[1]['uid'];
                 
                 //send the link
                 $result = file_get_contents($url);
@@ -146,7 +146,7 @@ class EduPotpie{
             case "remove" : // remove action begins
             
                 //set the url
-                $url = "http://www.edu.potpie.in/api/assignment.php?token=sndfkksjdkf&key=ETMS&ass_id=".$args[1]['ass_id']."&uid=".$args[1]['uid'];
+                $url = "http://www.edupotpie.com/api/assignment.php?token=sndfkksjdkf&key=ETMS&ass_id=".$args[1]['ass_id']."&uid=".$args[1]['uid'];
                 
                 //send the link
                 $result = file_get_contents($url);
@@ -158,7 +158,7 @@ class EduPotpie{
             case "restore" : // restore action begins
             
                 //set the url
-                $url = "http://www.edu.potpie.in/api/assignment.php?token=sndfkksjdkf&key=restore&ass_id=".$args[1]['ass_id']."&uid=".$args[1]['uid'];
+                $url = "http://www.edupotpie.com/api/assignment.php?token=sndfkksjdkf&key=restore&ass_id=".$args[1]['ass_id']."&uid=".$args[1]['uid'];
                 
                 //send the link
                 $result = file_get_contents($url);
@@ -172,7 +172,7 @@ class EduPotpie{
              //here we have to update assignment 
               if (is_array($args[1])){
                 //set the URL
-                $url = "http://www.edu.potpie.in/api/assignment.php?token=sndfkksjdkf&key=update";
+                $url = "http://www.edupotpie.com/api/assignment.php?token=sndfkksjdkf&key=update";
                 
                 //output
                 return $this->Post($url , $args[1]);
@@ -199,7 +199,7 @@ class EduPotpie{
              //here we have to create notes 
               if (is_array($args[1])){
                 //set the URL
-                $url = "http://www.edu.potpie.in/api/notes.php?token=sndfkksjdkf&key=create";
+                $url = "http://www.edupotpie.com/api/notes.php?token=sndfkksjdkf&key=create";
                 
                 //output
                 return $this->Post($url , $args[1]);
@@ -218,7 +218,7 @@ class EduPotpie{
              //here we have to update notes 
               if (is_array($args[1])){
                 //set the URL
-                $url = "http://www.edu.potpie.in/api/notes.php?token=sndfkksjdkf&key=update";
+                $url = "http://www.edupotpie.com/api/notes.php?token=sndfkksjdkf&key=update";
                 
                 //output
                 return $this->Post($url , $args[1]);
